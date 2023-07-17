@@ -1,3 +1,11 @@
+/*
+ *  mirror.c
+ *  mmap4fun
+ *
+ *  Created by Jaeden Amero on 2023-07-15.
+ *  Copyright 2023. SPDX-License-Identifier: Apache-2.0
+ */
+
 /* Map the same memory twice contiguously within a process's memory space. */
 
 #include <err.h>
