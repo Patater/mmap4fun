@@ -1,4 +1,4 @@
-name: Build
+name: Build and run
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-  build:
+  build-and-run:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,3 +21,7 @@ jobs:
       - name: Build mirror
         run: |
             make mirror
+
+      - name: Run mirror
+        run: |
+            ./mirror
