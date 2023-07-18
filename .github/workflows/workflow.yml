@@ -1,0 +1,23 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@master
+
+      - name: Show build environment
+        run: |
+            echo -n "CC: "; cc --version
+
+      - name: Build mirror
+        run: |
+            make mirror
